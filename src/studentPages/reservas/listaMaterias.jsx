@@ -14,11 +14,11 @@ const ListaMaterias = () => {
   const [seleccionado, setSeleccionado] = useState(null);
 
   const elementos = [
-    { id: 1, nombre: 'Ingeniria de Sistemas Computacionales', imagen: 'logo192.png' },
-    { id: 2, nombre: 'Ingeniria de Sistemas Computacionales', imagen: 'logo192.png' },
-    { id: 3, nombre: 'Ingeniria de Sistemas Computacionales', imagen: 'logo192.png' },
-    { id: 4, nombre: 'Ingeniria de Sistemas Computacionales', imagen: 'logo192.png' },
-    { id: 5, nombre: 'Ingeniria de Sistemas Computacionales', imagen: 'logo192.png' },
+    { id: 1, nombre: 'Ingenieria de Sistemas Computacionales', imagen: 'dti.png' },
+    { id: 2, nombre: 'Comunicacion', imagen: 'comunicacion.png' },
+    { id: 3, nombre: 'Administracion', imagen: 'administracion.png' },
+    { id: 4, nombre: 'Ingenieria Financiera', imagen: 'ingenieria_financiera.png' },
+    { id: 5, nombre: 'Ingenieria de Sistemas Computacionales', imagen: 'dti.png' },
     ];
 
   const seleccionarElemento = (id) => {

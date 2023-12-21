@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 
 const divGeneral = {
     display: 'flex',
@@ -43,12 +43,16 @@ const txtRestart = {
 const BtnSaveAndRestart = () => {
     return(
         <div style = {divGeneral}>
-            <button style={btnSave}>
-                <label style={txtSave}>GUARDAR</label>
-            </button>
-            <button style={btnRestart}>
-                <label style={txtRestart}>REINICIAR</label>
-            </button>
+            <Link to = '/createReservas'>
+                <button style={btnSave}>
+                    <label style={txtSave}>GUARDAR</label>
+                </button>
+            </Link>
+            <Link to = '/createReservas'>
+                <button style={btnRestart}>
+                    <label style={txtRestart}>REINICIAR</label>
+                </button>
+            </Link>
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import BoxInfo from './boxInfo.jsx';
 import EndSessionBtn from './endSessionBtn.jsx';
+import { Link } from 'react-router-dom';
 
   const imagenStyle = {
     width: '272px', 
@@ -83,7 +84,9 @@ return (
     </div>
     </div>
     <div style={divBtn}>
-      <EndSessionBtn/>
+      <Link to = '/'>
+        <EndSessionBtn/>
+      </Link>
     </div>
   </div>
   );

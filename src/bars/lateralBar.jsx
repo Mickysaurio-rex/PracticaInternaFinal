@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LateralBar = () => {
     const lateralStyle = {
@@ -13,20 +14,34 @@ const LateralBar = () => {
         alignItems: 'center',
       };
 
-      const buttonStyle = {
+      const buttonCreateStyle = {
         height: "40px",
         width: "40px",
-        backgroundImage: 'url("C:/Users/micky/PracticaInterna/proyecto_interna/public/icons8-calendario-más-24.png")', // Reemplaza con la ruta de tu imagen
+        backgroundImage: 'url("icons8-calendario-más-24.png")', // Reemplaza con la ruta de tu imagen
         backgroundSize: 'cover',
-        backgroundColor: 'black',
+        backgroundColor: '#09184D',
         margin: '10px 0', // Ajuste de margen arriba y abajo
+        border: 'none',
+      }
+
+      const buttonDatesStyle = {
+        height: "40px",
+        width: "40px",
+        backgroundImage: 'url("icons8-135-grados-48.png")', 
+        backgroundSize: 'cover',
+        backgroundColor: '#09184D',
+        margin: '10px 0', 
         border: 'none',
       }
 
       return(
         <div style={lateralStyle}>
-            <button style={buttonStyle}></button>
-            <button style={buttonStyle}></button>
+            <Link to = "/createReservas">
+            <button style={buttonCreateStyle}></button>
+            </Link>
+            <Link to = "/misReservas">
+            <button style={buttonDatesStyle}></button>
+            </Link>
         </div>
       );
 }

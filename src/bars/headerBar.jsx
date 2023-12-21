@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = ({nombreApellido}) => {
   const headerStyle = {
@@ -26,17 +27,33 @@ const Header = ({nombreApellido}) => {
     // Agrega estilos para tu icono (puedes usar una imagen o un ícono de biblioteca como FontAwesome)
   };
 
+  const imgUser = {
+    width: '46px',
+    height: '46px',
+
+  };
+
+  const buttonName = {
+    backgroundColor: '#09184D',
+    border: 'none',
+    color: '#FFFFFF',
+    fontSize: '20px' 
+
+  }
   return (
     <div>
       <div style={headerStyle}>
         <div style={logoStyle}>Reservas UPB</div>
         <div style={userInfoStyle}>
           <div style={iconStyle}>
-            {/* Aquí coloca tu icono */}
-            🌟
+            <img src = 'icons8-usuario-masculino-en-círculo-24.png'/>
           </div>
           <div>
-            <label style={{ margin: '0' }}>{nombreApellido}</label>
+            <Link to = '/userprofile'>
+              <button style={buttonName}>
+                {nombreApellido}
+              </button>
+            </Link>
           </div>
         </div>
       </div>
